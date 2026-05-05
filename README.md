@@ -12,6 +12,8 @@
 Taille des données fixée à 1000 utilisateurs, 50 posts par utilisateur et 20 followers par utilisateur.
 Test de charge pour 1, 10, 20, 50, 100, et 1000 utilisateurs simultanés (moyenne sur 3 runs).
 
+**Choix des mesures :** L'injection de charge a été réalisée à l'aide de l'outil Locust. Pour chaque palier de concurrence, le test a été maintenu en continu pendant 30 secondes à 1 minute avant d'en relever la moyenne. Ce choix de protocole a pour but d'exclure les temps d'allumage des instances (cold start) afin de mesurer les performances de l'application "à chaud", en régime établi. Les résultats reflètent donc la véritable capacité du système à encaisser une charge continue.
+
 ### Graphique des résultats
 ![Temps moyen par requête selon la concurrence](conc.png)
 
@@ -30,6 +32,8 @@ Oui, les résultats obtenus sont parfaitement logiques et cela montre le comport
 **Protocole :**
 Charge fixée à 50 utilisateurs concurrents. Nombre de posts fixé à 100 par utilisateur.
 Test sur la variation du nombre de followees : 20, 40, et 60 (moyenne sur 3 runs).
+
+**Choix des mesures :** L'injection de charge a été réalisée à l'aide de l'outil Locust. Pour chaque palier de concurrence, le test a été maintenu en continu pendant 30 secondes à 1 minute avant d'en relever la moyenne. Ce choix de protocole a pour but d'exclure les temps d'allumage des instances (cold start) afin de mesurer les performances de l'application "à chaud", en régime établi. Les résultats reflètent donc la véritable capacité du système à encaisser une charge continue.
 
 ### Graphique des résultats
 ![Temps moyen par requête selon le fanout](fanout.png)
